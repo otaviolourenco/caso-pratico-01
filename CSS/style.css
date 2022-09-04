@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 *{
     margin:0;
     padding:0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 html{
@@ -19,13 +20,33 @@ h2{
     font-size: 48px;
 }
 
+.separator{
+    width: 100%;
+    height: 361px;
+    overflow: hidden;
+    background-image: url(/images/photo4.png);
+    background-position: center top 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.separator.sec{
+    background-image: url(/images/photo11.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: inset;
+}
+
 header{
     width: 100%;
     height: 864px;
     background-color: #FEFEFE;
-    background-image: url(/images/header.jpg);
+    background-image: url(/images/photo1.jpg);
     background-attachment: fixed;
     background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 .menu-bar{
@@ -73,21 +94,139 @@ header{
 }
 
 .sobre-intem.img{
-    padding-top: 50px;
-    border-radius: 50px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 40px;
 }
 
 .discografia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    display: -webkit-flex;
-    display: block;
     padding: 80px;
 }
 
-.disc-grid{
-    width: 231px;
+.discografia:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.disc{
+    float: left;
+    width: 251px;
+    border: thin solid #848484;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 5px 20px 1px;
+}
+
+.disc img:hover{
+    opacity: 0.5;
+}
+
+.disc img{
+    width: 100%;
+}
+
+#social-music{
+    font-size: 35px;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+#social-music a{
+    font-size: 35px;
+    color: #000000fc;
+    text-decoration: none;
     padding: 20px;
 }
+
+#social-music a:hover{
+    text-shadow: 0 4px 5px #8f877b;
+}
+
+.agenda{
+    display: grid;
+}
+
+.box-contacto{
+    display: grid;
+    position: relative;
+    text-align: center;
+    padding: 70px;
+}
+
+.contacto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form{
+    text-align: center;
+    background: #D9D9D9;
+    border: 1px solid #000000;
+    padding: 30px;
+    text-align: left;
+    width: 361px;
+    height: 500px;
+}
+
+form input{
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 24px;
+    max-width: 300px;
+}
+
+.contacto img{
+    height: 453px;
+    border-radius: 40px;
+}
+
+.contacto #submit{
+    float: right;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #000000;
+    color: white;
+    border-style: none;
+}
+
+.contacto p{
+    position: absolute;
+    width: 286px;
+    height: 43px;
+    left: 165px;
+    top: 450px;
+}
+
+footer{
+    width: 100%;
+    background-color: #000000;
+    color: #FEFEFE;
+    text-align: center;
+    padding: 20px;
+}
+
+.social{
+    padding: 10px;
+}
+
+.social a{
+    color: #FEFEFE;
+    margin-right: 10px;
+}
+
+.social a:hover{
+    color: #848484;
+}
+
 
 
 
