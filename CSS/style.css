@@ -6,6 +6,12 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: futura;
+    src: url(/font/futura.ttf);
 }
 
 html{
@@ -17,30 +23,19 @@ img{
 }
 
 h2{
-    font-size: 48px;
+    font-size: 40px;
 }
 
-.separator{
-    width: 100%;
-    height: 361px;
-    overflow: hidden;
-    background-image: url(/images/photo4.png);
-    background-position: center top 20%;
-    background-size: cover;
-    background-repeat: no-repeat;
+a{
+    text-decoration: none;
+    color: #000000;
 }
 
-.separator.sec{
-    background-image: url(/images/photo11.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border: inset;
-}
 
 header{
+    position: relative;
     width: 100%;
-    height: 895px;
+    height: 800px;
     background-color: #FEFEFE;
     background-image: url(/images/photo1.jpg);
     background-attachment: fixed;
@@ -49,15 +44,19 @@ header{
     background-repeat: no-repeat;
 }
 
+#logo{
+    width: 50px;
+}
+
 .menu-bar{
     display: flex;
     position: fixed;
     width: 100%;
     justify-content: space-between;
-    background-image: linear-gradient(#000000b4, #0000007c);
-    box-shadow: 0px 2px 30px #000000;
+    background-color: #000000;
+    box-shadow: 0px 4px 20px #000000;
     align-items: center;
-    padding: 10px 60px;
+    padding: 5px 60px;
     z-index: 1;
 }
 
@@ -69,10 +68,37 @@ header{
 
 .menu a{
     color: #FEFEFE;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
 
+.menu a:hover{
+    color: #8f877b;
+    font-style: italic;
+}
+
+.menu li ul{
+    position: absolute;
+    color: white;
+    display: none;
+    max-width: 130px;
+    top: 50px;
+    right: 100px;
+    padding-top: 5px;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 2px 30px #000000;
+}
+
+.menu li:hover ul{
+    display: block;
+    line-height: 40px;
+}
+
+.dropdown-content li:hover{
+    color: #8f877b;
+    font-style: italic;
+    
 }
 
 #search{
@@ -82,21 +108,53 @@ header{
     padding-left: 40px ;
 }
 
+#arctic {
+    position: absolute;
+    font-size: 100px;
+    font-family: futura;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 55px;
+    right: 310px;
+    bottom: 120px;
+    filter: drop-shadow(1px 1px 2px rgba(255, 255, 255, 0.638));
+}
+
 .sobre{
     text-align: center;
     display: -webkit-flex;
     display: flex;
-    padding: 70px;
+    padding: 80px;
 }
 
-.sobre-intem{
-    padding: 20px;
+.italic{
+    font-style: italic;
+    color: #4b4c48;
 }
 
-.sobre-intem.img{
+.sobre-desc{
+    padding: 60px 80px;
+}
+
+#wikimais:hover{
+    font-style: italic;
+    color: #742e05;
+}
+
+.sobre-img{
     border: none;
     margin-top: 10px;
-    border-radius: 40px;
+    border-radius: 10px;
+}
+
+.separator{
+    width: 100%;
+    height: 361px;
+    overflow: hidden;
+    background-image: url(/images/photo4.png);
+    background-position: center top 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .discografia{
@@ -113,9 +171,13 @@ header{
     clear: both;
 }
 
+.discografia p{
+    padding-bottom: 15px;
+}
+
 .disc{
     float: left;
-    width: 251px;
+    width: 230px;
     border: thin solid #848484;
     padding: 10px;
     text-align: center;
@@ -124,63 +186,82 @@ header{
     box-shadow: 0 5px 20px 1px;
 }
 
-.disc img:hover{
-    opacity: 0.5;
-}
-
 .disc img{
     width: 100%;
 }
 
-#social-music{
-    font-size: 35px;
-    padding: 20px;
-    justify-content: space-around;
+.disc img:hover{
+    opacity: 0.5;
 }
 
-#social-music a{
-    font-size: 35px;
+#social-music{
+    padding-top: 15px;
+}
+
+#social-music i{
+    font-size: 30px;
     color: #000000fc;
     text-decoration: none;
-    padding: 20px;
+    padding-left: 20px;
 }
 
-#social-music a:hover{
+#social-music i:hover{
     text-shadow: 0 4px 5px #8f877b;
 }
 
-.agenda{
-    display: grid;
-    text-align: center;
-    align-items: center;
-    padding: 80px 0px; 
-}
-
-.agenda::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.table{
+.box-agenda{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    background-color: #848484;
+    background-image: url(/images/photo15.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 720px;
+    text-align: center;
 }
 
-.ag-ft img{
-    width: 200px;
+.box-agenda h2{
+    color: white;
+    padding-top: 70px;
+}
+
+.agenda{
+    border: solid #6969696b 1px;
+    border-radius: 20px;
+    background-image: linear-gradient( 300deg, #0202022c, #ffffff3e, #0202023a);
+    box-shadow: -3px -5px 5px #0606064f;
+    margin: 100px 0 0 50px;
+    align-self: center;
+    padding: 20px;
+    line-height: 50px;
+    width: 700px;
+}
+
+.agenda a{
+    text-decoration: none;
+    color: #3e3e39;
+}
+
+.agenda a:hover{
+    color: #742e05;
+}
+
+.box-agenda .mais{
+    margin-right: 180px;
+    font-size: 20px;
+}
+
+.box-agenda .mais:hover{
+    font-style: italic;
+    color: #742e05;
 }
 
 .box-contacto{
-    display: grid;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 70px;
-}
-
-.ag-tab{
-    border: 1px;
-    border-bottom: solid #000000;
+    padding: 30px;
 }
 
 .contacto{
@@ -193,30 +274,34 @@ form{
     display: block;
     background: #D9D9D9;
     border: 1px solid #bbbbbb;
-    box-shadow: 0 5px 20px 1px;;
-    border-radius: 20px;
-    padding: 30px;
+    box-shadow: 0px 4px 20px #000000;
+    border-radius: 10px;
+    padding: 20px;
     text-align: left;
-    width: 361px;
-    height: 500px;
+    width: 350px;
 }
 
 form input{
     background-color: #ffffff;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
     max-width: 300px;
+    padding: 2px 5px;
+}
+
+form label{
+    font-size: 15px;
 }
 
 .contacto img{
-    height: 453px;
-    border-radius: 40px;
+    height: 440px;
+    border-radius: 10px;
 }
 
 .contacto #submit{
     padding: 5px;
     max-width: 150px;
-    font-size: 18px;
+    font-size: 15px;
     background-color: #000000;
     color: white;
     margin: 25px 0px;
@@ -225,8 +310,15 @@ form input{
 
 .contacto #form1{
     text-align: center;
-    margin-top: 25px;
+    margin-top: px;
+}
 
+#mailto{
+    font-style: italic;
+}
+
+#mailto:hover{
+    color: #742e05;
 }
 
 footer{
